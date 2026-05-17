@@ -1,0 +1,20 @@
+server:
+  port: 8002
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: repair-order-system
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+repair:
+  order:
+    timeout-unaccepted: 60000
+    timeout-unvisited: 300000
+    max-load-per-worker: 3
+    cancel-penalty-before-accept: 0
+    cancel-penalty-after-accept: 10
+    cancel-penalty-after-visited: 20
